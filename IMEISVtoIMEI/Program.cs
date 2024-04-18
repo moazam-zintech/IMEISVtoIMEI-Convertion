@@ -11,7 +11,6 @@ class Program
 
         Console.WriteLine("Enter Value:");
         string input = Console.ReadLine();
-
         if (!IsNumeric(input))
         {
             Console.WriteLine("Please enter only numeric characters.");
@@ -22,12 +21,10 @@ class Program
         }
         else
         {
-            string imeisv = input;
-            string imei = ConvertIMEISVtoIMEI(imeisv);
+            string imei = ConvertIMEISVtoIMEI(input);
             Console.WriteLine(imei);
         }
     }
-
     static bool IsNumeric(string value)
     {
         return long.TryParse(value, out _);
@@ -36,9 +33,7 @@ class Program
     static string ConvertIMEISVtoIMEI(string imeisv)
     {
         string imeiWithoutSVN = imeisv.Substring(0, imeisv.Length - 2);
-
-
-        int checkDigit = CalculateLuhnCheckDigit(imeisv);
+        int checkDigit = CalculateLuhnCheckDigit(imeiWithoutSVN);
         string imei = imeiWithoutSVN + checkDigit.ToString();
         return imei;
     }
@@ -47,8 +42,7 @@ class Program
     {
         int sum = 0;
         bool doubleDigit = true;
-
-        for (int i = input.Length - 2; i >= 0; i--)
+        for (int i = input.Length - 1; i >= 0; i--)
         {
             int digit = int.Parse(input[i].ToString());
 
@@ -64,10 +58,7 @@ class Program
             sum += digit;
             doubleDigit = !doubleDigit;
         }
-        sum += int.Parse(input[input.Length - 1].ToString());
-        // int checkDigit = (9 * sum) % 10;
-        // return checkDigit;
-        int checkDigit = 10 - (sum % 10);
+        int checkDigit = (10 - (sum % 10)) % 10;
         return checkDigit;
     }
 }
