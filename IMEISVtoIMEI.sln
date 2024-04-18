@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMEISVtoIMEI", "IMEISVtoIMEI\IMEISVtoIMEI.csproj", "{F1A65A4F-2F25-4686-8A74-7D31B7DFB1AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1A65A4F-2F25-4686-8A74-7D31B7DFB1AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A65A4F-2F25-4686-8A74-7D31B7DFB1AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A65A4F-2F25-4686-8A74-7D31B7DFB1AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A65A4F-2F25-4686-8A74-7D31B7DFB1AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E829B381-2806-4D9A-93C1-71B5CF527362}
+	EndGlobalSection
+EndGlobal
